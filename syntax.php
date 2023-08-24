@@ -85,8 +85,32 @@
 
         echo strlen($string).'<br>';//used to get the total length of the string
         echo trim($string).'<br>';//removes whitespaces before and after strings
-        echo strrev($string);
+        echo strrev($string).'<br>';
+
+        // dealing with line and text breaks
+        $longText = "
+            Hello, my name is Nchang
+            I am 19,
+            I love Video Games
+        ";
+
+        echo $longText. '<br>';
+        echo nl2br($longText). '<br>';
 ?>
+
+<?php
+        // working with arrays
         
+        $fruits = ['mango', 'banana', 'pawpaw'];
+        
+        //printing the whole array
+        echo '<pre>';
+            var_dump($fruits);
+        echo '</pre>';
+        
+        //accessing index value of an array
+        echo '<br>';
+        echo $fruits[1];
+?>
 </body> 
 </html>
