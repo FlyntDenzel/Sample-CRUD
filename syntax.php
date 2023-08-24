@@ -110,7 +110,34 @@
         
         //accessing index value of an array
         echo '<br>';
-        echo $fruits[1];
+        echo $fruits[1].'<br>';
+    
+        //checking whether there is an element at position number 0
+        var_dump(isset($fruits[0]));
+
+        //appending element into the array
+        $fruits[] = 'Peach';
+
+        echo '<pre>';
+            var_dump($fruits);
+        echo '</pre>';
+
+        echo '<br>';
+        //using associative array
+        $person = [
+            'name' => 'Nchang',
+            'surname' => 'Denzel',
+            'age' => 19,
+            'hobbies' => ['Video games', 'basketball']
+        ];
+
+      echo '<pre>';
+            var_dump($person);
+      echo '</pre>';
+
+      //searching the value of specified key
+      echo $person['name'].'<br>';
+
 ?>
 </body> 
 </html>
