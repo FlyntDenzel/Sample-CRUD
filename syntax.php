@@ -19,7 +19,8 @@
         echo $height.'<br>';  
         echo $isMale.'<br>';
         echo $age.'<br>';
-        echo $salary.'<br>';
+        echo $salary.;
+
      ?>
 </body> 
 </html>
