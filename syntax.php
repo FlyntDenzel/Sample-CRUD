@@ -51,7 +51,41 @@
         $b = 2;
         $c = 1.5;
 
-        echo $a + $b * $c.'<br>';
+        echo $a + $b * $c.'<br>'.'<br>';
+
+        //assigning variables
+        echo ("assigning values to variables:").'<br>';
+
+        $a += $b; 
+        echo $a.'<br>';
+
+        $a += $c; 
+        echo $a.'<br>';
+
+        $b += $c; 
+        echo $b.'<br>';
+
+        //dealing with number functions
+        echo abs(-10).'<br>'; //prints the absolute value of the number in the brackets
+        echo pow(2,3).'<br>'; //prints the value of the first digit to the power of the second digit
+        echo round(1.3).'<br>';
+?>
+
+<?php
+        // dealing with strings
+        $question = 'how are you?';
+
+        $string1 = 'Hello Nchang '.$question.'<br>';
+        $string2 = "Hello Denzel".$question.'<br>';
+
+        echo $string1.'<br>';
+
+        // dealing with string functions
+        $string = "     Hello      World     ";
+
+        echo strlen($string).'<br>';//used to get the total length of the string
+        echo trim($string).'<br>';//removes whitespaces before and after strings
+        echo strrev($string);
 ?>
         
 </body> 
