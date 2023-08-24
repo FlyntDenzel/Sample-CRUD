@@ -6,9 +6,10 @@
     <title>Syntax</title>
 </head>
 <body>
-    <!-- using variables in php -->
-
+    
     <?php
+        // dealing with variables in php
+
         $name = 'denzel';
         $age = 19;
         $isMale = true;
@@ -33,7 +34,25 @@
         //using var_dump shows the data type, its length and the value of the variable
         var_dump($name);
         echo '<br>';
-        var_dump($salary);
-     ?>
+        // var_dump($salary);
+
+        //built in functions for variables
+        echo is_int($age); //outputs false
+        echo is_double($salary).'<br>'; //outputs false
+
+        //dealing with constants
+        define('PI', 3.14);
+        echo ("value of PI: ").PI.'<br>';
+?>
+
+<?php
+    // using numbers for arithmetic operations
+        $a = 5;
+        $b = 2;
+        $c = 1.5;
+
+        echo $a + $b * $c.'<br>';
+?>
+        
 </body> 
 </html>
