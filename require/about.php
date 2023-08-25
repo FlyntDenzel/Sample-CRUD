@@ -1,5 +1,5 @@
   <?php
-        include "header.php";
+        include "header.php"; 
   ?>  
     <h3>Nothing fun here to see </h3>
 
