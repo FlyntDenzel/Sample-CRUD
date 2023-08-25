@@ -140,7 +140,73 @@
 
 ?>
 <?php
-    echo 'hello from this side of the room';
+    // dealing with loops
+       $counter = 0;
+
+    //    while ($counter < 10) {
+    //     echo $counter.'<br>';
+    //     $counter++;
+    //    }
+
+       do {
+        echo $counter.'<br>';
+        $counter++;
+       }
+       while ($counter < 10);
+
+       $games = ['cod', 'pop', 'ac'];
+       //for each element of name game belonging to the array of name games print it
+       foreach ($games as $game) {
+        echo $game.'<br>';
+       }
+
+    //    using an associtive array
+       $person = [
+        'name' => 'Nchang',
+        'surname' => 'Denzel',
+        'age' => 19,
+        'hobbies' => ['Video games', 'basketball']
+    ];
+
+    foreach ($person as $key => $value) {
+        //if a value is an array then execute
+        if (is_array($value)) {
+            echo $key.' =>'.implode(", ", $value).'<br>';
+        }
+        else{
+            echo $key.' =>'.$value.'<br>';
+        }
+    }
+    echo '<br>';
+?>
+
+<?php
+        // dealing with functions
+        function hello(){
+            echo "Bankai".'<br>';
+        }
+        hello();
+        hello();
+        hello();
+
+        function sum($a,$b){
+            return $a +$b;
+        }
+
+        echo sum(3,4).'<br>';
+
+        function sumall(...$nums){
+            //three dots selects all arguments or parameters in the function
+            $sum = 0;
+            foreach ($nums as $num) {
+                $sum = $sum + $num;
+        }
+        return $sum;
+    }
+        echo sumall(1,2,3,4,5,7);
+
+        //dealing with arrow functions
+        
 ?>
 </body> 
 </html>
