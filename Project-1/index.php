@@ -1,5 +1,14 @@
 <?php
-    $pdo = new PDO('mysql:host=localhost;port=3306;dbname=products_crud', 'root', '');
+    $pdo = new PDO('mysql:host=localhost;port=3306;dbname=product_crud', 'root', '');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $statement = $pdo->prepare('SELECT * FROM products ORDER BY create_date DESC');
+    $statement->execute();
+    $products = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    echo '<pre>';
+        // var_dump($products);
+    echo '</pre>';
 ?>
 
 <!DOCTYPE html>
@@ -18,29 +27,27 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Image</th>
+      <th scope="col">Title</th>
+      <th scope="col">Price</th>
+      <th scope="col">Create Date </th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
+   <?php foreach ($products as $i => $product) {?>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"><?php echo $i + 1?></th>
+      <td></td>
+      <td><?php echo $product['title']?></td>
+      <td><?php echo $product['price']?></td>
+      <td><?php echo $product['create_date']?></td>
+      <td>
+        <button class="btn btn-outline-primary">Edit</button>
+        <button class="btn btn-outline-danger">Delete</button>
+      </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+   <?php }?>
   </tbody>
 </table>
 </body>
