@@ -23,6 +23,10 @@
 <body>
     <h1 class="title">Products CRUD</h1>
 
+    <p>
+        <a href="create.php" class="btn btn-success mx-3">Create Product</a>
+    </p>
+
     <table class="table">
   <thead>
     <tr>
