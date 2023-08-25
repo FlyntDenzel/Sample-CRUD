@@ -9,5 +9,8 @@
     echo __LINE__.'<br>';
 
     // creating directory
-     mkdir('test');
+    //  mkdir('test');
+
+    //reading a file and its content
+    echo file_get_contents('text.txt').'<br>';
 ?>
