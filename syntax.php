@@ -205,7 +205,16 @@
     }
         echo sumall(1,2,3,4,5,7);
 
+        echo '<br>';
         //dealing with arrow functions
+
+?>
+
+<?php
+    // working with dates
+        // printing the current date
+        echo date('Y-m-d H:i:s').'<br>';
+
         
 ?>
 </body> 
