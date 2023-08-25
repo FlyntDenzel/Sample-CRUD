@@ -34,6 +34,11 @@
 
         $result = curl_exec($resource);
         curl_close($resource);
+
+        echo $result;
+
+        // this code creates a cURL session, sets the necessary options to perform a POST request with JSON data, sends the request to the specified URL, 
+        // captures and stores the response, and then closes the cURL session.
 ?>
 
 
