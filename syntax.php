@@ -139,5 +139,8 @@
       echo $person['name'].'<br>';
 
 ?>
+<?php
+    echo 'hello from this side of the room';
+?>
 </body> 
 </html>
