@@ -11,7 +11,8 @@
         $sql = "insert into `crud` (name,email,mobile,password) values('$name','$email','$mobile','$password')";
         $result = mysqli_query($con,$sql);
         if ($result) {
-            echo "Data inserted successfully";
+            // echo "Data inserted successfully";
+            header('location:display.php');
         }
         else{
             die(mysqli_error($con));
