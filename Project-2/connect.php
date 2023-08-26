@@ -1,11 +1,8 @@
 <?php
     //connecting to database
-    $connection = new mysqli('localhost', 'admin', '', 'crudoperation');
-    if ($connection) {
-        echo "connected successfuly";
-    }
-    else{
-        die(mysqli_error($connection));
+    $con = new mysqli('localhost', 'admin', '', 'crudoperation');
+    if (!$con) {
+        die(mysqli_error($con));
     }
 
 ?>
