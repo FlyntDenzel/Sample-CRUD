@@ -12,7 +12,7 @@
         $result = mysqli_query($con,$sql);
         if ($result) {
             // echo "Data inserted successfully";
-            header('location:display.php');
+            header('location:index.php');
         }
         else{
             die(mysqli_error($con));
@@ -49,6 +49,7 @@
                 <input type="password" name="password" class="form-control my-2" placeholder="enter your password here" autocomplete="off">
             </div>
             <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            <a href="index.php" class="btn btn-primary">Return</a>
         </form>
     </div>
 
