@@ -2,25 +2,27 @@
     $pdo = new PDO('mysql:host=localhost;port=3306;dbname=product_crud', 'root', '');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-    $price = $_POST['price'];
-    $date = date('Y-m-d H:i:s');
 
-    //inserting elements into the table name i.e products
-    $pdo -> prepare("INSERT INTO products (title, image, description, price, create_date)
-                VALUES (:title, :image, :description, :price, :date)
-    ");
+    echo $_SERVER['REQUEST_METHOD'].'<br>';
+    if ($_SERVER['INPUT_REQUEST' === 'POST']) {
+        $title = $_POST['title'];
+        $description = $_POST['description'];
+        $price = $_POST['price'];
+        $date = date('Y-m-d H:i:s');
 
-    $statement->bindValue(':title', $title);
-    $statement->bindValue(':image', '');
-    $statement->bindValue(':description', $description);
-    $statement->bindValue(':price', $price);
-    $statement->bindValue(':date', $date);
+        //inserting elements into the table name i.e products
+        $pdo -> prepare("INSERT INTO products (title, image, description, price, create_date)
+                    VALUES (:title, :image, :description, :price, :date)
+        ");
 
-    $statement->execute();
-}
+        $statement->bindValue(':title', $title);
+        $statement->bindValue(':image', '');
+        $statement->bindValue(':description', $description);
+        $statement->bindValue(':price', $price);
+        $statement->bindValue(':date', $date);
+        $statement->execute();
+    }
+      
 ?>
 
 <!DOCTYPE html>
