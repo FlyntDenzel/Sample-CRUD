@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD' === 'POST']) {
 
     // Bind the parameters to the statement
     $statement->bindValue(':title', $title);
-    $statement->bindValue(':image', '');
+    $statement->bindValue(':image', $_FILES['image']['tmp_name']);
     $statement->bindValue(':description', $description);
     $statement->bindValue(':price', $price);
     $statement->bindValue(':date', $date);
