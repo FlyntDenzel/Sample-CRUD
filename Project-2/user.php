@@ -4,11 +4,11 @@
     if (isset($_POST['submit'])) {
         $name = $_POST['name'];
         $email = $_POST['email'];
-        $number = $_POST['number'];
+        $mobile = $_POST['mobile'];
         $password = $_POST['password'];
 
 
-        $sql = "insert into `crud` (name,email,number,password) values('$name','$email','$number','$password')";
+        $sql = "insert into `crud` (name,email,mobile,password) values('$name','$email','$mobile','$password')";
         $result = mysqli_query($con,$sql);
         if ($result) {
             echo "Data inserted successfully";
@@ -41,7 +41,7 @@
             </div>
             <div class="form-group my-3">
                 <label>Phone Number</label>
-                <input type="number" name="number" class="form-control my-2" placeholder="enter your phone number here" autocomplete="off">
+                <input type="number" name="mobile" class="form-control my-2" placeholder="enter your phone number here" autocomplete="off">
             </div>
             <div class="form-group my-3">
                 <label>Password</label>
